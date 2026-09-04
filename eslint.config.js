@@ -10,8 +10,6 @@ const gitignorePath = path.resolve(import.meta.dirname, '.gitignore');
 
 export default defineConfig(
 	includeIgnoreFile(gitignorePath),
-	// Emitted by `dpm codegen-js`; regenerate with `pnpm daml:codegen` rather than editing.
-	{ ignores: ['daml.js/'] },
 	js.configs.recommended,
 	ts.configs.recommended,
 	svelte.configs.recommended,
