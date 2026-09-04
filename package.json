@@ -15,7 +15,7 @@
 		"app:preview": "vite preview",
 		"daml:build": "cd daml && rm -rf .daml/dist && dpm build",
 		"daml:codegen": "pnpm daml:build && rm -rf daml.js && dpm codegen-js daml/.daml/dist/*.dar -o daml.js",
-		"ledger:start": "dpm sandbox --log-file-appender off -c canton.conf --dar daml/.daml/dist/*.dar",
+		"ledger:start": "dpm sandbox --log-file-appender off -c canton.local.conf --dar daml/.daml/dist/*.dar",
 		"wallet:start": "mkdir -p .wallet && wallet-gateway-remote -c wallet-gateway.local.json"
 	},
 	"devDependencies": {
